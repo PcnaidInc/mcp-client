@@ -21,3 +21,7 @@ npm start
 ```
 
 Tap "O + enter" to open the front end. It should list out all the tools, prompts, and resources available.
+
+## CI
+
+The `.github/workflows/ci.yml` workflow runs on pull requests and pushes to `main`. It installs dependencies with `npm ci` and runs `npm run type-check` and `npm run build`.
