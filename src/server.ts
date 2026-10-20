@@ -7,7 +7,9 @@ type Env = {
 };
 
 export class MyAgent extends Agent<Env, never> {
-	mcp = new MCPClientManager("my-agent", "1.0.0");
+	mcp = new MCPClientManager("my-agent", "1.0.0", {
+		storage: this.ctx.storage,
+	});
 
 	async onRequest(request: Request): Promise<Response> {
 		const reqUrl = new URL(request.url);
