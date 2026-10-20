@@ -68,7 +68,6 @@ function App() {
 				placeholder: {
 					auth_url: null,
 					capabilities: null,
-					error: null,
 					instructions: null,
 					name: serverName,
 					server_url: serverUrl,
