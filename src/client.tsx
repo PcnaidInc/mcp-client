@@ -130,24 +130,24 @@ function App() {
 			<div className="messages-section">
 				<h2>Server Data</h2>
 				<h3>Tools</h3>
-				{mcpState.tools.map((tool) => (
-					<div key={`${tool.name}-${tool.serverId}`}>
+				{mcpState.tools.map((tool, index) => (
+					<div key={`${tool.name}-${index}`}>
 						<b>{tool.name}</b>
 						<pre className="code">{JSON.stringify(tool, null, 2)}</pre>
 					</div>
 				))}
 
 				<h3>Prompts</h3>
-				{mcpState.prompts.map((prompt) => (
-					<div key={`${prompt.name}-${prompt.serverId}`}>
+				{mcpState.prompts.map((prompt, index) => (
+					<div key={`${prompt.name}-${index}`}>
 						<b>{prompt.name}</b>
 						<pre className="code">{JSON.stringify(prompt, null, 2)}</pre>
 					</div>
 				))}
 
 				<h3>Resources</h3>
-				{mcpState.resources.map((resource) => (
-					<div key={`${resource.name}-${resource.serverId}`}>
+				{mcpState.resources.map((resource, index) => (
+					<div key={`${resource.name}-${index}`}>
 						<b>{resource.name}</b>
 						<pre className="code">{JSON.stringify(resource, null, 2)}</pre>
 					</div>
